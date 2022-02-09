@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
 function App() {
+  const todo = ["a", "b", "c"];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <input type="text" placeholder="smth to do" />
+      <button>add</button>
+      <button>Delete</button>
+      <div>
+        {todo.map((e, idx) => (
+          <li key={idx}>{e}</li>
+        ))}
+      </div>
     </div>
   );
 }
